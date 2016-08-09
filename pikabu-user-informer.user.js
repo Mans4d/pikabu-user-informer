@@ -99,12 +99,18 @@
 		noteSpan.style.color = 'red';
 		noteSpan.style.margin = '0px 2px 0px 0px';
 		
-		var bCommentUser = userSpan.parentElement.parentElement;
-		bCommentUser.insertBefore(noteSpan, bCommentUser.children[1]);
+		if (userSpan.tagName.toLowerCase() == 'span') {
+			var bCommentUser = userSpan.parentElement.parentElement;
+			bCommentUser.insertBefore(noteSpan, bCommentUser.children[1]);
+		} else {
+			var bTitleLine = userSpan.parentElement;
+			noteSpan.style.textDecoration = 'none';
+			bTitleLine.insertBefore(noteSpan, bTitleLine.querySelector('.story__date'));
+		}
 	}
 
 	function checkNickNames( ) {
-		var userSpans = [].slice.call(document.querySelectorAll('.b-comment__user > a > span:not(.userscript-rendered)'));
+		var userSpans = [].slice.call(document.querySelectorAll('.b-comment__user > a > span:not(.userscript-rendered), .story__author:not(.userscript-rendered)'));
 		userSpans.forEach(function (userSpan) {
             userSpan.setAttribute('class', (userSpan.getAttribute('class') ? userSpan.getAttribute('class') : '') + ' userscript-rendered');
 			var infoBox;
