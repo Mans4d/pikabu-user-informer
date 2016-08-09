@@ -1,8 +1,8 @@
-// ==UserScript==
+п»ї// ==UserScript==
 // @name         Pikabu User Info
 // @namespace    pikabu
-// @version      0.1
-// @description  Показывает информер с профилем пользователя при наведении мыши на ник 
+// @version      0.6
+// @description  РџРѕРєР°Р·С‹РІР°РµС‚ РёРЅС„РѕСЂРјРµСЂ СЃ РїСЂРѕС„РёР»РµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РїСЂРё РЅР°РІРµРґРµРЅРёРё РјС‹С€Рё РЅР° РЅРёРє 
 // @author       FraidZZ
 // @include      *
 // @grant        none
